@@ -2,7 +2,6 @@ require 'pry'
 
 
 class Author
-
     attr_accessor :name
     @@all = []
 
@@ -11,12 +10,12 @@ class Author
         @@all << self
     end
 
-    def self.all        
+    def self.all
         @@all
     end
 
     def posts
-        Post.all.select {|post| post.author == self}
+        Post.all.select {|post|post.author == self}
     end
 
     def add_post(post)
@@ -31,5 +30,6 @@ class Author
     def self.post_count
         Post.all.count 
     end
-    
+
+
 end
